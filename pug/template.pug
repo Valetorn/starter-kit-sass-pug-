@@ -1,0 +1,24 @@
+include modules/head.pug
+<!DOCTYPE html>
+html(lang="en")
+
+	block head
+		+head ({
+			"title": "Index",
+			"author": "Durin",
+			"description": "new Site",
+			"keywords": "css, html, pug"
+		})
+
+	body
+		block header
+			header
+
+		block main
+			h1 Hello World!
+
+		block footer
+			footer
+
+		block scripts
+			script(src="js/script.js")
