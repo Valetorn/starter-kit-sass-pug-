@@ -13,15 +13,6 @@ body {
 h1, h2, h3, h4, h5, h6 {
 	@include no-indents;
 }
-h1 {
-	@include font("Cuprum", sans-serif; 1.875rem; 30px; 400; @dark-blue-h);
-}
-h2 {
-	@include font("Cuprum", sans-serif; 2.25rem; 24px; 400; @dark-blue-h);
-}
-h3 {
-	@include font("Cuprum", sans-serif; 1.875rem; 24px; 400; #000000);
-}
 p {
 	@include no-indents;
 }

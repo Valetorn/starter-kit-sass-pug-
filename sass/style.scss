@@ -1,5 +1,6 @@
-@import (scss) "libs/normalize.css/normalize.css";
+@import "libs/normalize.css/normalize";
 @import "global/fonts.scss";
 @import "global/var.scss";
 @import "global/mixins.scss";
+@import "global/general.scss";
 @import "blocks/main.scss";

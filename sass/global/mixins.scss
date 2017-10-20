@@ -1,8 +1,8 @@
 @mixin font(
-	$font-family: "PT Sans", sans-serif;
-	$font-size: 100%;
-	$line-height: 24px;
-	$font-weight: 400;
+	$font-family: $font-family--base,
+	$font-size: 100%,
+	$line-height: 24px,
+	$font-weight: 400,
 	$color: #000000
 	) {
 	font-family: $font-family;
