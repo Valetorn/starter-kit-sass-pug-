@@ -1,2 +1,16 @@
-$font-family--base: "PT Sans", sans-serif;
-$font-family--secodary: "Cuprum", sans-serif;
+$font-name: "PT Sans";
+$font-name-secondary: "Cuprum";
+$font-map: (
+	400:"ptsans",
+	700:"ptsansbold"
+);
+$font-map-secondary: (
+	400:"cuprum",
+	700:"cuprumbold"
+);
+$font-map-secondary--italic: (
+	400:"cuprumitalic",
+	700:"cuprumbolditalic"
+);
+$font-family--base: $font-name, sans-serif;
+$font-family--secodary: $font-name-secondary, sans-serif;

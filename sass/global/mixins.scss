@@ -1,3 +1,16 @@
+@mixin font-mixin($family, $style, $map) {
+	$dir-name: "../fonts/";
+	@each $weight, $path in $map {
+		@font-face {
+			font-family: $family;
+			font-style: $style;
+			font-weight: $weight;
+			src: local($family),
+					url($dir-name + $path + ".woff2") format("woff2"),
+					url($dir-name + $path + ".woff") format("woff");
+		}
+	}
+}
 @mixin font(
 	$font-family: $font-family--base,
 	$font-size: 100%,
