@@ -1,4 +1,4 @@
-include modules/head.pug
+include modules/head
 <!DOCTYPE html>
 html(lang="en")
 
@@ -12,13 +12,13 @@ html(lang="en")
 
 	body
 		block header
-			header
+			include modules/header
 
 		block main
-			h1 Hello World!
+			include modules/main
 
 		block footer
-			footer
+			include modules/footer
 
 		block scripts
 			script(src="js/script.js")

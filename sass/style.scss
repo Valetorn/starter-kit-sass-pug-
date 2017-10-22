@@ -1,6 +1,9 @@
 @import "libs/normalize.css/normalize";
+
 @import "global/var";
 @import "global/mixins";
 @import "global/fonts";
 @import "global/general";
+@import "global/common";
+
 @import "blocks/main";

@@ -24,6 +24,10 @@
 	font-weight: $font-weight;
 	color: $color;
 }
+@mixin inline-block($align: top) {
+	display: inline-block;
+	vertical-align: $align;
+}
 @mixin no-indents {
 	margin: 0;
 	padding: 0;
@@ -31,29 +35,4 @@
 @mixin no-list-style {
 	@include no-indents;
 	list-style: none;
-}
-@keyframes fade {
-	100% {
-		opacity: 1;
-	}
-}
-.show {
-	animation: fade 1s forwards ease-in;
-}
-.hidden {
-	display: none;
-}
-@keyframes shake {
-  0%, 100% {
-    transform: translate(-50%, -50%);
-  }
-  10%, 30%, 50%, 70%, 90% {
-    transform: translate(-60%, -50%);
-  }
-  20%, 40%, 60%, 80% {
-    transform: translate(-50%, -50%);
-  }
-}
-.error {
-	animation: shake 0.6s !important;
 }
