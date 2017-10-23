@@ -3,7 +3,7 @@ html {
 }
 
 body {
-	@include no-indents;
+	@include no-indents ();
 	@include font;
 	display: flex;
 	flex-direction: column;
@@ -11,13 +11,13 @@ body {
 	margin: 0 auto;
 }
 h1, h2, h3, h4, h5, h6 {
-	@include no-indents;
+	@include no-indents ();
 }
 p {
-	@include no-indents;
+	@include no-indents ();
 }
 figure {
-	@include no-indents;
+	@include no-indents ();
 }
 img {
   max-width: 100%;

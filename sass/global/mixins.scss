@@ -1,4 +1,4 @@
-@mixin font-mixin($family, $style, $map) {
+@mixin font-mixin ($family, $style, $map) {
 	$dir-name: "../fonts/";
 	@each $weight, $path in $map {
 		@font-face {
@@ -11,28 +11,33 @@
 		}
 	}
 }
-@mixin font(
-	$font-family: $font-family--base,
-	$font-size: 100%,
-	$line-height: 24px,
-	$font-weight: 400,
+@mixin font (
+	$family: $font-family--base,
+	$size: 100%,
+	$height: 24px,
+	$weight: 400,
 	$color: #000000
 	) {
-	font-family: $font-family;
-	font-size: $font-size;
-	line-height: $line-height;
-	font-weight: $font-weight;
+	font-family: $family;
+	font-size: $size;
+	line-height: $height;
+	font-weight: $weight;
 	color: $color;
 }
-@mixin inline-block($align: top) {
+@mixin inline-block ($align: top) {
 	display: inline-block;
 	vertical-align: $align;
 }
-@mixin no-indents {
+@mixin no-indents () {
 	margin: 0;
 	padding: 0;
 }
-@mixin no-list-style {
+@mixin no-list-style () {
 	@include no-indents;
 	list-style: none;
+}
+@mixin center-x () {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
 }

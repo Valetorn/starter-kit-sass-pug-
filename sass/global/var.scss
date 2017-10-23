@@ -1,5 +1,7 @@
+/*fonts*/
 $font-name: "PT Sans";
 $font-name-secondary: "Cuprum";
+
 $font-map: (
 	400:"ptsans",
 	700:"ptsansbold"
@@ -12,5 +14,9 @@ $font-map-secondary--italic: (
 	400:"cuprumitalic",
 	700:"cuprumbolditalic"
 );
+
 $font-family--base: $font-name, sans-serif;
 $font-family--secodary: $font-name-secondary, sans-serif;
+/*colors*/
+$color-white: #ffffff;
+$color-black: #000000;
