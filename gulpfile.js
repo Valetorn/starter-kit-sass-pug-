@@ -6,7 +6,8 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync').create(),
     mqpacker = require('css-mqpacker'),
     minify = require('gulp-csso'),
-    rename = require('gulp-rename'),
+		rename = require('gulp-rename'),
+		spritesmith = require('gulp.spritesmith'),
     imagemin = require('gulp-imagemin'),
     dirSync = require('gulp-directory-sync'),
     del = require('del'),
@@ -44,6 +45,18 @@ gulp.task('style', function () {
     ]))
     .pipe(gulp.dest(outputDir + 'css/'))
     .pipe(browserSync.stream());
+});
+
+gulp.task('sprite', function(cb) {
+  var spriteData = gulp.src('img/icons/*.png').pipe(spritesmith({
+    imgName: 'sprite.png',
+    imgPath: '../img/sprite.png',
+    cssName: 'sprite.scss'
+  }));
+
+  spriteData.img.pipe(gulp.dest('img/'));
+  spriteData.css.pipe(gulp.dest('sass/global/'));
+  cb();
 });
 
 gulp.task('imageSync', function () {
